@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "chesttracker",
+  "version": "${version}",
+  "name": "Chest Tracker (26.3)",
+  "description": "Client side item storage - remember where you've put things.",
+  "authors": [
+    "Strefiz"
+  ],
+  "contributors": [
+    "JackFred - original mod",
+    "ponuing - 26.3 unofficial port",
+    "WinTone01 - Turkish Translations"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Strefiz/ChestTracker-26.3",
+    "sources": "https://github.com/Strefiz/ChestTracker-26.3",
+    "issues": "https://github.com/Strefiz/ChestTracker-26.3/issues"
+  },
+  "license": "LGPL-3.0-only",
+  "icon": "assets/chesttracker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "red.jackf.chesttracker.impl.ChestTracker"
+    ],
+    "chesttracker": [
+      "red.jackf.chesttracker.impl.DefaultChestTrackerPlugin"
+    ],
+    "modmenu": [
+      "red.jackf.chesttracker.impl.compat.mods.ChestTrackerModMenu"
+    ],
+    "whereisit_client": [
+      "red.jackf.chesttracker.impl.compat.mods.ChestTrackerWhereIsItPlugin"
+    ],
+    "shulkerboxtooltip": [
+      "red.jackf.chesttracker.impl.compat.mods.shulkerboxtooltip.ChestTrackerShulkerBoxTooltip"
+    ],
+    "jade": [
+      "red.jackf.chesttracker.impl.compat.mods.jade.ChestTrackerJadePlugin"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "chesttracker.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "accessWidener": "chesttracker.accesswidener",
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.issues": "https://github.com/Strefiz/ChestTracker-26.3/issues",
+        "modmenu.github_releases": "https://github.com/Strefiz/ChestTracker-26.3/releases"
+      }
+    }
+  },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": ">=26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "yet_another_config_lib_v3": ">=3.9.0"
+  },
+  "recommends": {
+    "searchables": "*"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "shulkerboxtooltip": "*",
+    "jade": "*"
+  }
+}
